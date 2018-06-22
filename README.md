@@ -14,3 +14,16 @@ This is the same Kareha you know and love with a potentially huge speed boost.
         $ cd <your install dir>
         $ sudo cpanm --installdeps .
         $ plackup app.psgi
+
+Basic Install for Ubuntu Server (or other derivatives)
+------------------------------------------------------
+
+        $ apt install apache2 php libapache2-mod-php libapache2-mod-perl libcgi-session-perl imagemagick
+        $ cd <your install dir>
+        $ cp example.htaccess .htaccess
+        $
+        $ Append /etc/apache2/apache2.conf with
+        $ Options ExecCGI
+        $ AddHandler cgi-script .cgi .pl
+        $
+        $ chmod -R 755 <your install dir>
